@@ -1,20 +1,23 @@
 using Unity.Entities;
 using UnityEngine;
 
-public struct MineralCube : IComponentData
+namespace Mineral
 {
-    public float CurrentHardness;
-    public int MineralType;
-}
-
-public class MineralCubeAuthoring : MonoBehaviour
-{
-    public class MineralCubeBaker : Baker<MineralCubeAuthoring>
+    public struct MineralCube : IComponentData
     {
-        public override void Bake(MineralCubeAuthoring cubeAuthoring)
+        public float CurrentHardness;
+        public int MineralType;
+    }
+
+    public class MineralCubeAuthoring : MonoBehaviour
+    {
+        public class MineralCubeBaker : Baker<MineralCubeAuthoring>
         {
-            var entity = GetEntity(TransformUsageFlags.Dynamic);
-            AddComponent<MineralCube>(entity);
+            public override void Bake(MineralCubeAuthoring cubeAuthoring)
+            {
+                var entity = GetEntity(TransformUsageFlags.Dynamic);
+                AddComponent<MineralCube>(entity);
+            }
         }
     }
 }

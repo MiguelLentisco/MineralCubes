@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 namespace Mineral
 {
-    
     [CreateAssetMenu(fileName = "MineralDatabase", menuName = "ScriptableObjects/MineralDatabase")]
     public class MineralDatabase : ScriptableObject
     {

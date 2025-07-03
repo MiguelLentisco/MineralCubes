@@ -11,5 +11,5 @@ Mini project testing some cube types generated randomly by perlin noise
 3. Generate!!!
 <img style="display: block; margin: auto;" src="img/Generated1.png"/>
 
-Even in 3D!
+4. Even in 3D!
 <img style="display: block; margin: auto;" src="img/Generated2.png"/>
